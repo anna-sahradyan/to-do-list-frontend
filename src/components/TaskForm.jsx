@@ -1,9 +1,14 @@
 import React from 'react';
 
-const TaskForm = () => {
+const TaskForm = ({handleInputChange, createTask, name}) => {
+
     return (
         <>
-<h2>taskform</h2>
+            <form className={"task-form"} onSubmit={createTask}>
+                <input type="text" placeholder={"Add a Task"} name={"name"} value={name} onChange={handleInputChange}/>
+                <button type={"submit"}>Add</button>
+
+            </form>
         </>
     );
 };

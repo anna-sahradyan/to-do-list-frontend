@@ -6,8 +6,6 @@ import TaskList from "./TaskList";
 const Home = () => {
     return (
         <>
-            <Task/>
-            <TaskForm/>
             <TaskList/>
         </>
     );
