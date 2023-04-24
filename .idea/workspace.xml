@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd9ee66d-152c-4dba-a882-92c68a0667ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/to-do-list-frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,9 +54,9 @@
       <recent name="D:\to-do-list-node-project\to-do-list-frontend\src\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\to-do-list-node-project\to-do-list-frontend\public" />
       <recent name="D:\to-do-list-node-project\to-do-list-frontend\src" />
       <recent name="D:\to-do-list-node-project\to-do-list-frontend" />
+      <recent name="D:\to-do-list-node-project\to-do-list-frontend\public" />
       <recent name="D:\to-do-list-node-project\to-do-list-frontend\src\components" />
     </key>
   </component>
@@ -90,7 +84,7 @@
       <workItem from="1682096916784" duration="3181000" />
       <workItem from="1682238193864" duration="999000" />
       <workItem from="1682249581914" duration="3072000" />
-      <workItem from="1682253625629" duration="18381000" />
+      <workItem from="1682253625629" duration="21360000" />
     </task>
     <servers />
   </component>
