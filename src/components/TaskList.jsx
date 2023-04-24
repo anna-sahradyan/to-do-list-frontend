@@ -5,11 +5,13 @@ import {toast} from "react-toastify";
 import axios from "axios";
 //import {URL} from "../App.js";
 import {BASE_URL} from "../api/helper";
+import Loading from "./Loading";
+
 
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
-    const [completetasks, setCompleteTasks] = useState([]);
+    const [completedTasks, setCompletedTasks] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -50,6 +52,7 @@ const TaskList = () => {
 /api/tasks`, formData);
             toast.success("Task added")
             setFormData({...formData, name: ""});
+            getTasks()
         } catch (err) {
             toast.error(err.message)
             console.log(err)
@@ -97,12 +100,20 @@ const TaskList = () => {
         }
         try {
             axios.put(`${BASE_URL}
-/api/tasks/${task._id}`,newFormData);
+/api/tasks/${task._id}`, newFormData);
             getTasks();
         } catch (err) {
             toast.error(err.message)
+            setIsLoading(false)
         }
     }
+    useEffect(() => {
+        const cTask = tasks.filter((task) => {
+            return task.completed === true;
+        })
+        setCompletedTasks(cTask)
+
+    }, [tasks])
     return (
         <>
             <TaskForm
@@ -110,25 +121,27 @@ const TaskList = () => {
                 isEditing={isEditing}
                 updateTask={updateTask}
             />
-            <div className="--flex-between --pb">
-                <p>
-                    <b>Total Tasks:</b>0
-                </p>
-                <p>
-                    <b>Completed Tasks:</b>0
-                </p>
-            </div>
+            {tasks.length > 0 && (
+                <div className="--flex-between --pb">
+                    <p>
+                        <b>Total Tasks:</b> {tasks.length}
+                    </p>
+                    <p>
+                        <b>Completed Tasks:</b> {completedTasks.length}
+                    </p>
+                </div>
+            )}
+
             <hr/>
             {isLoading && (
-                <div className="-=>{
-                -flex-center">
-                    <img src="/assets/loader.gif.url" alt="loader"/>
+                <div className="--flex-center">
+                   <Loading/>
                 </div>
             )}
             {!isLoading && tasks.length === 0 ? (<p className={"--py"}>No task added. Please add a task</p>) : (<>
                 {tasks.map((task, index) => {
                     return <Task key={`${task}_${index}`} task={task} index={index} deleteTask={deleteTask}
-                                 getSingleTask={getSingleTask}  setToComplete={ setToComplete}/>
+                                 getSingleTask={getSingleTask} setToComplete={setToComplete}/>
 
                 })}
             </>)}
