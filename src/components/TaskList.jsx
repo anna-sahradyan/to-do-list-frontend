@@ -4,7 +4,7 @@ import Task from "./Task";
 import {toast} from "react-toastify";
 import axios from "axios";
 //import {URL} from "../App.js";
-import {BASE_URL} from "./api/helper";
+import {BASE_URL} from "./api";
 import Loading from "./Loading";
 
 

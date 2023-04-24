@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-src/components/api/helper.js
 /.pnp
 .pnp.js
 
