@@ -1,2 +1,2 @@
-export const BASE_URL="http://localhost:8000";
+export const BASE_URL="https://to-do-list-app-l57x.onrender.com";
 
